@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>G</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <script
+            async
+            src="https://unpkg.com/typer-dot-js@0.1.0/typer.js"
+        ></script>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Rajdhani&display=swap"
+            rel="stylesheet"
+        />
+    </head>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        html,
+        body {
+            overflow: hidden;
+        }
+        .container {
+            width: 100%;
+            height: 100vh;
+            background-color: #0f172a;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0 20px;
+        }
+        .grad {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 700px;
+            height: 700px;
+            border-radius: 50%;
+            background: linear-gradient(
+                236.22deg,
+                #ff3c47 -3.32%,
+                #eec850 12.21%,
+                #3257ed 73.4%
+            );
+            border: 122px solid #d21655;
+            filter: blur(187px);
+        }
+
+        .text {
+            font-size: 50px;
+            color: white;
+            font-family: "Rajdhani", sans-serif;
+            white-space: nowrap;
+            z-index: 999;
+        }
+        .text .typer {
+            text-align: end;
+            color: white !important;
+            min-height: 65px;
+        }
+
+        .elements {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            /* z-index: 800; */
+        }
+
+        .elements img {
+            border: none;
+            outline: none;
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+            border-radius: 10px;
+            position: absolute;
+        }
+        .elements .js {
+            top: 20%;
+            left: 20%;
+        }
+
+        .elements .react {
+            right: 20%;
+            bottom: 20%;
+        }
+
+        .elements .nodejs {
+            top: 10%;
+            right: 15%;
+        }
+
+        .elements .html {
+            bottom: 10%;
+            left: 20%;
+        }
+
+        .elements .css {
+            bottom: 25%;
+            left: 20%;
+        }
+
+        @media only screen and (max-width: 700px) {
+            .text {
+                font-size: 30px;
+            }
+            .elements .left {
+                left: 5%;
+            }
+            .elements .right {
+                right: 10%;
+            }
+        }
+
+        @media only screen and (max-width: 430px) {
+            .container {
+                justify-content: start;
+            }
+            .text {
+                font-size: 20px;
+            }
+            .elements img {
+                width: 70px;
+                height: 70px;
+            }
+            .elements .right {
+                right: 15%;
+            }
+        }
+    </style>
+    <body>
+        <div class="container">
+            <div class="grad"></div>
+            <div class="elements">
+                <img
+                    src="https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png"
+                    alt=""
+                    class="js left"
+                />
+                <img
+                    src="https://pbs.twimg.com/profile_images/446356636710363136/OYIaJ1KK_400x400.png"
+                    alt=""
+                    class="react right"
+                />
+                <img
+                    src="https://www.muylinux.com/wp-content/uploads/2022/04/nodejs.png"
+                    alt=""
+                    class="nodejs right"
+                />
+                <img
+                    src="https://play-lh.googleusercontent.com/RslBy1o2NEBYUdRjQtUqLbN-ZM2hpks1mHPMiHMrpAuLqxeBPcFSAjo65nQHbTA53YYn"
+                    alt=""
+                    class="html left"
+                />
+                <img
+                    src="https://play-lh.googleusercontent.com/RTAZb9E639F4JBcuBRTPEk9_92I-kaKgBMw4LFxTGhdCQeqWukXh74rTngbQpBVGxqo"
+                    alt=""
+                    class="css left"
+                />
+            </div>
+
+            <div class="text">
+                <p>Hi I'm</p>
+                <h1 class="">MUHAMMAD RAJ</h1>
+                <p
+                    class="title typer"
+                    data-words="A full stack developer,Passionate,Love to learn"
+                    data-delay="100"
+                    data-cursor-display="_"
+                    data-deleteDelay="1000"
+                >
+                    A full stack developer
+                </p>
+            </div>
+        </div>
+
+        <script>
+            const grad = document.querySelector(".grad");
+            document.addEventListener("mousemove", (e) => {
+                grad.style.transform = `translate(${e.clientX - 700 / 2}px, ${
+                    e.clientY - 700 / 2
+                }px)`;
+            });
+        </script>
+    </body>
+</html>
