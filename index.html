@@ -8,134 +8,15 @@
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
         <script
-            async
+            defer
             src="https://unpkg.com/typer-dot-js@0.1.0/typer.js"
         ></script>
         <link
             href="https://fonts.googleapis.com/css2?family=Rajdhani&display=swap"
             rel="stylesheet"
         />
+        <link rel="stylesheet" href="style.css" />
     </head>
-
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-        }
-        html,
-        body {
-            overflow: hidden;
-        }
-        .container {
-            width: 100%;
-            height: 100vh;
-            background-color: #0f172a;
-            position: relative;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 0 20px;
-        }
-        .grad {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 700px;
-            height: 700px;
-            border-radius: 50%;
-            background: linear-gradient(
-                236.22deg,
-                #ff3c47 -3.32%,
-                #eec850 12.21%,
-                #3257ed 73.4%
-            );
-            border: 122px solid #d21655;
-            filter: blur(187px);
-        }
-
-        .text {
-            font-size: 50px;
-            color: white;
-            font-family: "Rajdhani", sans-serif;
-            white-space: nowrap;
-            z-index: 999;
-        }
-        .text .typer {
-            text-align: end;
-            color: white !important;
-            min-height: 65px;
-        }
-
-        .elements {
-            position: absolute;
-            inset: 0;
-            width: 100%;
-            height: 100%;
-            /* z-index: 800; */
-        }
-
-        .elements img {
-            border: none;
-            outline: none;
-            width: 100px;
-            height: 100px;
-            object-fit: cover;
-            border-radius: 10px;
-            position: absolute;
-        }
-        .elements .js {
-            top: 20%;
-            left: 20%;
-        }
-
-        .elements .react {
-            right: 20%;
-            bottom: 20%;
-        }
-
-        .elements .nodejs {
-            top: 10%;
-            right: 15%;
-        }
-
-        .elements .html {
-            bottom: 10%;
-            left: 20%;
-        }
-
-        .elements .css {
-            bottom: 25%;
-            left: 20%;
-        }
-
-        @media only screen and (max-width: 700px) {
-            .text {
-                font-size: 30px;
-            }
-            .elements .left {
-                left: 5%;
-            }
-            .elements .right {
-                right: 10%;
-            }
-        }
-
-        @media only screen and (max-width: 430px) {
-            .container {
-                justify-content: start;
-            }
-            .text {
-                font-size: 20px;
-            }
-            .elements img {
-                width: 70px;
-                height: 70px;
-            }
-            .elements .right {
-                right: 15%;
-            }
-        }
-    </style>
     <body>
         <div class="container">
             <div class="grad"></div>
